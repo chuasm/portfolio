@@ -1,0 +1,10 @@
+body {
+  font: normal 16px "Century Gothic", CenturyGothic, Geneva, Futura, AppleGothic, sans-serif !important;
+  margin: initial;
+  background: #F8CDDA;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #1D2B64, #F8CDDA);
+  background: linear-gradient(to bottom, #1D2B64, #F8CDDA);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  min-width: initial; }
