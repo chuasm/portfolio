@@ -8,3 +8,28 @@ body {
   background-size: 100vw 100vh;
   background-attachment: fixed;
   min-width: initial; }
+  @media (min-width: 768px) {
+    body {
+      line-height: 1.5 !important; } }
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    background: #FFF; }
+    @media (orientation: landscape) {
+      .wrapper > div {
+        height: 70vh;
+        width: 70vh; } }
+    @media (orientation: portrait) {
+      .wrapper > div {
+        height: 70vw;
+        width: 70vw; } }
