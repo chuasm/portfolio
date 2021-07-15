@@ -1,23 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="notranslate" translate="no">
+
   <head>
-    <title>Si Min's Portfolio | UI Design & Development</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.bundle.js"></script>
+    <title>Si Min Chua | UI Design & Dev</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Singapore-based webmaster, content creator, designer, and developer. Let's connect!">
+    <meta name="keywords" content="Design, User Experience, User Interface, Interface Design, Frontend Development, Graphic Design, Webmaster, Portfolio">
+    <meta name="author" content="Chua Si Min">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <meta name="robots" content="noindex">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="shortcut icon" href="/img/cat.png">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/aul1yzr.css">
+
   </head>
+
   <body>
-    <div class="wrapper">
-      <div>
-        <h1>Hello, I'm Si Min.</h1>
-        <div class="text-center">
-          I'm populating this portfolio,<br>
-          do check back later!
+
+    <!-- For Browser Pushstates -->
+      <div id="pseudo-state">none</div>
+
+    <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-target="#navbar" id="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav" id="myTab">
+              <li class="nav-item active">
+                <a class="stretched-link createState active" id="work" data-title="Work" data-bs-toggle="tab" data-bs-target="#work-tab" type="button">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="stretched-link createState" id="design" data-title="Design" data-bs-toggle="tab" data-bs-target="#design-tab" type="button">Design</a>
+              </li>
+              <li class="nav-item">
+                <a class="stretched-link createState" id="music" data-title="Music" data-bs-toggle="tab" data-bs-target="#music-tab" type="button">Music</a>
+              </li>
+              <li class="nav-item">
+                <a class="stretched-link createState" id="about" data-title="About" data-bs-toggle="tab" data-bs-target="#about-tab" type="button">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="stretched-link createState" id="resume" type="button" href="resume.pdf" target="_blank">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- All tabs & footer -->
+    <div id="tabs-and-footer">
+
+      <!-- All tabs -->
+        <div class="tab-content" id="tab-content">
+
+        <!-- First tab -->
+          <div class="tab-pane fade show active" id="work-tab">
+          </div>
+
+        <!-- Other tabs -->
+          <div class="tab-pane fade" id="work-items"></div>
+          <div class="tab-pane fade" id="design-tab"></div>
+          <div class="tab-pane fade" id="music-tab"></div>
+          <div class="tab-pane fade" id="about-tab"></div>
+
+        </div>
+
+    <!-- Footer -->
+      <div class="footer">
+        <div>
+          <span class="heading">Let's connect!</span>
+          <span>Download my <a href="resume.pdf" target="_blank">resume</a>, or drop me an <a href="mailto:chuasimin10@gmail.com">email</a>.</span>
         </div>
       </div>
+
     </div>
+
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
