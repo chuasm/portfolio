@@ -279,12 +279,19 @@
     });
 
 // shift hero items down on scroll
-    $(document).on('scroll',function(){
+    function parallax() {
         var scrollTop = $(window).scrollTop();
         var translate = scrollTop / $(window).height() * 100;
         $('#hero-items').css({
             'transform': 'translateY(' + translate +'%)'
         });
+    }
+    $(document).on({
+        scroll: function () {
+        parallax();
+        }, ready: function () {
+        parallaxImg();
+        }
     });
 
 // shrink navbar on scroll, only for desktop
