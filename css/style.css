@@ -1,8 +1,8 @@
 body {
   font: normal 16px "Europa", sans-serif !important;
-  background-color: #F8F8F8 !important;
   overflow-x: hidden;
-  line-height: 1.4 !important; }
+  line-height: 1.4 !important;
+  background: #F8F8F8 !important; }
 
 a:hover {
   cursor: pointer; }
@@ -102,58 +102,62 @@ a:hover {
   background: #2F3590;
   background: -webkit-linear-gradient(to bottom, #FDAE64, #2F3590);
   background: linear-gradient(to bottom, #FDAE64, #2F3590); }
-  #hero #hero-items {
-    max-width: 672px;
-    color: #F8F8F8;
-    transition: opacity .1s ease, top 2s ease;
+  #hero #hero-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
-    #hero #hero-items > div:nth-child(1) {
-      display: flex;
-      justify-content: center;
-      max-width: 80% !important;
-      padding-bottom: 15px; }
-      #hero #hero-items > div:nth-child(1) object {
-        width: 100%; }
-      @media (min-width: 992px) {
-        #hero #hero-items > div:nth-child(1) {
-          padding-bottom: 7.5px; } }
-    #hero #hero-items > div:nth-child(2) {
-      position: relative;
+    justify-content: center; }
+    #hero #hero-wrapper #hero-items {
+      z-index: 0;
+      max-width: 672px;
+      color: #F8F8F8;
+      transition: all .1s linear;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-image: url("../img/table.svg");
-      background-repeat: no-repeat;
-      background-position: bottom;
-      padding: 0 12px 0 40px; }
-      #hero #hero-items > div:nth-child(2) > div {
-        align-self: flex-start; }
-        #hero #hero-items > div:nth-child(2) > div object#keyboard {
-          width: 100%;
-          transform: translateY(8px); }
-        #hero #hero-items > div:nth-child(2) > div img#cat {
-          position: absolute;
-          width: 12%;
-          transform: scaleX(-1) translateY(8px);
-          right: 15%;
-          top: 20%; }
-        #hero #hero-items > div:nth-child(2) > div img#laptop {
-          width: 100%;
-          transform: translateY(5px); }
-    #hero #hero-items > div:nth-child(3) {
-      padding-top: 15px;
-      text-align: center;
-      font-size: .8em;
-      letter-spacing: 2px; }
-    #hero #hero-items > div:nth-child(4) {
-      position: absolute;
-      bottom: 15px;
-      font-size: 4em; }
-      #hero #hero-items > div:nth-child(4):hover {
-        cursor: pointer; }
+      flex-direction: column; }
+      #hero #hero-wrapper #hero-items > div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        max-width: 80% !important;
+        padding-bottom: 15px; }
+        #hero #hero-wrapper #hero-items > div:nth-child(1) object {
+          width: 100%; }
+        @media (min-width: 992px) {
+          #hero #hero-wrapper #hero-items > div:nth-child(1) {
+            padding-bottom: 7.5px; } }
+      #hero #hero-wrapper #hero-items > div:nth-child(2) {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/table.svg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        padding: 0 12px 0 40px; }
+        #hero #hero-wrapper #hero-items > div:nth-child(2) > div {
+          align-self: flex-start; }
+          #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#keyboard {
+            width: 100%;
+            transform: translateY(8px); }
+          #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#cat {
+            position: absolute;
+            width: 12%;
+            transform: scaleX(-1) translateY(8px);
+            right: 15%;
+            top: 20%; }
+          #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#laptop {
+            width: 100%;
+            transform: translateY(5px); }
+      #hero #hero-wrapper #hero-items > div:nth-child(3) {
+        padding-top: 15px;
+        text-align: center;
+        font-size: .8em;
+        letter-spacing: 2px; }
+      #hero #hero-wrapper #hero-items > div:nth-child(4) {
+        position: absolute;
+        bottom: 15px;
+        font-size: 4em; }
+        #hero #hero-wrapper #hero-items > div:nth-child(4):hover {
+          cursor: pointer; }
 
 .page-content {
   display: flex;
@@ -178,6 +182,9 @@ a:hover {
     min-height: 40vh; }
 
 #work-section {
+  background: #F8F8F8;
+  position: relative;
+  z-index: 0;
   display: flex;
   justify-content: center; }
   @media (min-width: 768px) {
