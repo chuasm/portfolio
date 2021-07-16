@@ -353,3 +353,11 @@
             closeSidebar();
         }  
     });
+
+// close sidebar on main body content click
+    $('#tabs-and-footer').on('click',function() {
+        if ($('body').css('overflow') == 'hidden') {
+            togglerClicks += 1;
+            closeSidebar();
+        }  
+    });
