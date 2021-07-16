@@ -303,7 +303,7 @@
         });
     }
     
-// open/close sidebar on toggler click
+// functions to open/close sidebar
     var togglerClicks = 0;
     var navWidth = $('#nav').width();
     function closeSidebar() {
@@ -334,6 +334,8 @@
             'overflow': 'hidden'
         });
     }
+
+// open/close sidebar on toggler click
     $('.navbar-toggler').on('click',function() {
         togglerClicks += 1;
         if (togglerClicks % 2 == 0) {
@@ -341,5 +343,13 @@
         }
         else {
             openSidebar();
+        }  
+    });
+
+// close sidebar on nav item click
+    $('.nav-item').on('click',function() {
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            togglerClicks += 1;
+            closeSidebar();
         }  
     });
