@@ -316,6 +316,7 @@
         $('#navbar-toggler').css ({
             'left': 15
         });
+        $('#navbar-toggler').removeClass('active');
         $('body').css ({
             'overflow': 'initial'
         });
@@ -330,6 +331,7 @@
         $('#navbar-toggler').css ({
             'left': navWidth + 15
         });
+        $('#navbar-toggler').addClass('active');
         $('body').css ({
             'overflow': 'hidden'
         });
