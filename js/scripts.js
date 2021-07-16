@@ -705,7 +705,6 @@
         }  
     });
 
-
 // close sidebar on menu item or main content click
     $('.nav-item').on('click',function(){
         if (window.matchMedia('(max-width: 991px)').matches) {
