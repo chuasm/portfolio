@@ -318,7 +318,7 @@
         });
         $('#navbar-toggler').removeClass('active');
         $('body').css ({
-            'overflow': 'initial'
+            'overflow-y': 'initial'
         });
     }
     function openSidebar() {
@@ -333,7 +333,7 @@
         });
         $('#navbar-toggler').addClass('active');
         $('body').css ({
-            'overflow': 'hidden'
+            'overflow-y': 'hidden'
         });
     }
 
@@ -358,7 +358,7 @@
 
 // close sidebar on main body content click
     $('#tabs-and-footer').on('click',function() {
-        if ($('body').css('overflow') == 'hidden') {
+        if ($('body').css('overflow-y') == 'hidden') {
             togglerClicks += 1;
             closeSidebar();
         }  
