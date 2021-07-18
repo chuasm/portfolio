@@ -604,6 +604,65 @@ a:hover {
 .subpage#page-work-portfolio .page-header {
   background-color: #C48A6D; }
 
+.subpage#design .page-header {
+  background: #9E5BA3;
+  background: -webkit-linear-gradient(to bottom, #FDAE64, #9E5BA3);
+  background: linear-gradient(to bottom, #FDAE64, #9E5BA3); }
+
+.subpage#design .text {
+  margin: 30px auto; }
+  @media (min-width: 992px) {
+    .subpage#design .text {
+      max-width: 720px; } }
+
+.subpage#design #photos {
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1; }
+  @media (min-width: 576px) {
+    .subpage#design #photos {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2; } }
+  @media (min-width: 768px) {
+    .subpage#design #photos {
+      -moz-column-count: 3;
+      -webkit-column-count: 3;
+      column-count: 3; } }
+  @media (min-width: 992px) {
+    .subpage#design #photos {
+      -moz-column-count: 4;
+      -webkit-column-count: 4;
+      column-count: 4; } }
+  .subpage#design #photos > div {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    position: relative;
+    background-color: #FFFFFF; }
+    .subpage#design #photos > div .overlay {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(248, 248, 248, 0.8);
+      padding: 15px;
+      z-index: 1;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: all .3s ease; }
+      .subpage#design #photos > div .overlay span {
+        display: block;
+        text-align: center;
+        text-shadow: 1px 1px 3px #F8F8F8; }
+    .subpage#design #photos > div img {
+      width: 100%; }
+
 .subpage#page-about {
   margin-top: 30px; }
   .subpage#page-about .page-body {
