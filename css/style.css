@@ -621,7 +621,8 @@ a:hover {
   column-gap: 30px;
   -moz-column-count: 1;
   -webkit-column-count: 1;
-  column-count: 1; }
+  column-count: 1;
+  margin-bottom: 30px; }
   @media (min-width: 576px) {
     .subpage#design #photos {
       -moz-column-count: 2;
