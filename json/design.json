@@ -1,0 +1,121 @@
+[
+    {
+        "medium": "e-Greeting Card",
+        "client": "School of the Arts, Singapore (SOTA)",
+        "desc": "Blah.",
+        "thumb": "img/design/design-01.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Video Conceptualisation / Production / Editing",
+        "client": "School of the Arts, Singapore (SOTA)",
+        "desc": "Blah.",
+        "thumb": "img/design/design-02.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Vector Art",
+        "client": "",
+        "desc": "Blah.",
+        "thumb": "img/design/design-03.png",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Print on Paper",
+        "client": "",
+        "desc": "Blah.",
+        "thumb": "img/design/design-04.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Print Poster / Flyer",
+        "client": "School of the Arts, Singapore (SOTA)",
+        "desc": "Blah.",
+        "thumb": "img/design/design-05.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Vector Illustration / Logo Design",
+        "client": "",
+        "desc": "Blah.",
+        "thumb": "img/design/design-06.png",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Print / Large Format Banner",
+        "client": "Cat Welfare Society",
+        "desc": "Blah.",
+        "thumb": "img/design/design-07.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Website Landing Banner",
+        "client": "Superlife Co.",
+        "desc": "Blah.",
+        "thumb": "img/design/design-08.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Backdrops for Class Photos",
+        "client": "Lifesparks Photography",
+        "desc": "Blah.",
+        "thumb": "img/design/design-09.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Presentation Slides",
+        "client": "Ministry of Education, Singapore",
+        "desc": "Blah.",
+        "thumb": "img/design/design-10.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Graphic / Logo Design",
+        "client": "That Pretty Fairy",
+        "desc": "Blah.",
+        "thumb": "img/design/design-11.png",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Animation",
+        "client": "School of the Arts, Singapore (SOTA)",
+        "desc": "Blah.",
+        "thumb": "img/design/design-12.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Video Conceptualisation",
+        "client": "School of the Arts, Singapore (SOTA)",
+        "desc": "Blah.",
+        "thumb": "img/design/design-13.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Vector Illustration / Key Visual Conceptualisation",
+        "client": "School of the Arts, Singapore (SOTA)",
+        "desc": "Blah.",
+        "thumb": "img/design/design-14.png",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Graphic Design",
+        "client": "",
+        "desc": "Blah.",
+        "thumb": "img/design/design-15.jpg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Key Visual Adaptation",
+        "client": "School of the Arts, Singapore (SOTA)",
+        "desc": "Blah.",
+        "thumb": "img/design/design-16.jpeg",
+        "actual": "something.jpg"
+    },
+    {
+        "medium": "Embroidery",
+        "client": "",
+        "desc": "Blah.",
+        "thumb": "img/design/design-17.jpg",
+        "actual": "something.jpg"
+    }
+]

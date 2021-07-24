@@ -90,6 +90,7 @@
         $('.nav-item a#design').tab('show');
         $('.nav-item a#design').parent().addClass('active');
         $('#design-tab').load('/design.html');
+        window.setTimeout(loadDesignContent, 100);
         toTheTop();
     }
     function loadMusic() {
@@ -158,7 +159,7 @@
         window.setTimeout(loadWork, 200);
     });
     $('#design').on('click', function() {
-        loadDesign();
+        window.setTimeout(loadDesign, 200);
     });
     $('#music').on('click', function() {
         loadMusic();
@@ -279,12 +280,19 @@
     });
 
 // shift hero items down on scroll
-    $(document).on('scroll',function(){
-        var scrollTop = $(window).scrollTop();
+    function parallax() {
+            var scrollTop = $(window).scrollTop();
         var translate = scrollTop / $(window).height() * 100;
         $('#hero-items').css({
             'transform': 'translateY(' + translate +'%)'
         });
+    }
+    $(document).on({
+        scroll: function () {
+        parallax();
+        }, ready: function () {
+        parallaxImg();
+        }
     });
 
 // shrink navbar on scroll, only for desktop
@@ -363,3 +371,36 @@
             closeSidebar();
         }  
     });
+
+// load design content
+    var loadDesignContent = function() {
+        $.ajax({
+            url: 'json/design.json',
+            type: 'get',
+            dataType: 'json',
+            success: function(data) {
+                for (var i=1; i<data.length+1; i++) {
+                    $('.design-medium-' + i).append(data[i-1].medium);
+                    $('.design-client-' + i).append(data[i-1].client);
+                    $('.design-desc-' + i).append(data[i-1].desc);
+                    $('.design-thumb-' + i).attr('src',data[i-1].thumb);
+                    $('.design-actual-' + i).attr('src',data[i-1].actual);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                alert('Error: ' + textStatus + ' - ' + errorThrown);
+            }
+        });
+        window.setTimeout(formatOverlays, 100);
+    }
+    
+// format overlay content for design content
+    function formatOverlays() {
+        var client = $('[class*=design-client]');
+        for (var i=1; i<client.length+1; i++) {
+            if ($('.design-client-' + i).is(':empty') == false) {
+                $('.design-client-' + i).addClass('has-client');
+            }
+        }
+    }
+    
