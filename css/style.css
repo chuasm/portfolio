@@ -47,14 +47,16 @@ a:hover {
       align-items: center;
       width: 100px;
       height: 68px;
-      transform: rotate(0); }
+      transform: rotate(0);
+      background: #F8F8F8; }
       @media (min-width: 992px) {
         .navbar > div ul li {
           transition: all 0.2s ease; } }
       .navbar > div ul li a {
         color: #888888;
         text-decoration: none;
-        transition: all 0.2s ease; }
+        transition: all 0.2s ease;
+        -webkit-appearance: initial; }
       .navbar > div ul li.active a, .navbar > div ul li:hover a {
         color: #333333; }
       .navbar > div ul li.active:after, .navbar > div ul li:hover:after {
@@ -639,9 +641,13 @@ a:hover {
       -webkit-column-count: 4;
       column-count: 4; } }
   .subpage#design #photos .design-wrap {
+    display: inline-block;
     margin-bottom: 15px;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0); }
+    will-change: transform; }
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        .subpage#design #photos .design-wrap {
+          will-change: initial; } } }
     .subpage#design #photos .design-wrap > div {
       width: 100%;
       position: relative;
