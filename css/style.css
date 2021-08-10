@@ -139,15 +139,18 @@ a:hover {
         background-image: url("../img/table.svg");
         background-repeat: no-repeat;
         background-position: bottom;
-        padding: 0 12px 0 40px; }
+        padding: 10px 12px 0 40px; }
         #hero #hero-wrapper #hero-items > div:nth-child(2) > div {
           align-self: flex-start; }
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#keyboard {
             width: 100%;
             transform: translateY(8px); }
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop {
-            width: 110%;
-            transform: translateY(-12px); }
+            width: 100%;
+            transform: scale(1.3) translate(-5px, -3px); }
+            @media (min-width: 768px) {
+              #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop {
+                transform: scale(1.2) translate(6px, -10px); } }
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#cat {
             position: absolute;
             width: 12%;
