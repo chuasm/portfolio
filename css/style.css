@@ -126,7 +126,8 @@ a:hover {
         max-width: 80% !important;
         padding-bottom: 15px; }
         #hero #hero-wrapper #hero-items > div:nth-child(1) object {
-          width: 100%; }
+          width: 100%;
+          padding-bottom: 15px; }
         @media (min-width: 992px) {
           #hero #hero-wrapper #hero-items > div:nth-child(1) {
             padding-bottom: 7.5px; } }
@@ -144,17 +145,17 @@ a:hover {
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#keyboard {
             width: 100%;
             transform: translateY(8px); }
+          #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop {
+            width: 110%;
+            transform: translateY(-12px); }
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#cat {
             position: absolute;
             width: 12%;
             transform: scaleX(-1) translateY(8px);
             right: 15%;
             top: 20%; }
-          #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#laptop {
-            width: 100%;
-            transform: translateY(5px); }
       #hero #hero-wrapper #hero-items > div:nth-child(3) {
-        padding-top: 15px;
+        padding-top: 22.5px;
         text-align: center;
         font-size: .8em;
         letter-spacing: 2px; }
