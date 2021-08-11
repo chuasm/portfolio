@@ -119,15 +119,16 @@ a:hover {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column; }
+      flex-direction: column;
+      animation: appear 1s ease; }
       #hero #hero-wrapper #hero-items > div:nth-child(1) {
         display: flex;
         justify-content: center;
-        max-width: 80% !important;
-        padding-bottom: 15px; }
+        max-width: 80% !important; }
         #hero #hero-wrapper #hero-items > div:nth-child(1) object {
           width: 100%;
-          padding-bottom: 15px; }
+          padding-bottom: 22.5px;
+          transform: rotate(5deg); }
         @media (min-width: 992px) {
           #hero #hero-wrapper #hero-items > div:nth-child(1) {
             padding-bottom: 7.5px; } }
@@ -142,15 +143,19 @@ a:hover {
         padding: 10px 12px 0 40px; }
         #hero #hero-wrapper #hero-items > div:nth-child(2) > div {
           align-self: flex-start; }
-          #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#keyboard {
+          #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#keyboard, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#keyboard {
             width: 100%;
             transform: translateY(8px); }
-          #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop {
+          #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#laptop {
             width: 100%;
             transform: scale(1.3) translate(-5px, -3px); }
             @media (min-width: 768px) {
-              #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop {
+              #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#laptop {
                 transform: scale(1.2) translate(6px, -10px); } }
+            #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop g#Code, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#laptop g#Code {
+              animation: screenOn 2s ease; }
+              #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop g#Code g#Actual_Code, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#laptop g#Code g#Actual_Code {
+                animation: linearWipe 2s ease; }
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#cat {
             position: absolute;
             width: 12%;
@@ -161,13 +166,61 @@ a:hover {
         padding-top: 22.5px;
         text-align: center;
         font-size: .8em;
-        letter-spacing: 2px; }
+        letter-spacing: 2px;
+        animation: appear-1 4s ease; }
       #hero #hero-wrapper #hero-items > div:nth-child(4) {
         position: absolute;
         bottom: 15px;
         font-size: 4em; }
         #hero #hero-wrapper #hero-items > div:nth-child(4):hover {
           cursor: pointer; }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 0; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes appear-1 {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes screenOn {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes linearWipe {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px); }
+  30% {
+    opacity: 0;
+    transform: translateX(-60px); }
+  45% {
+    opacity: 0;
+    transform: translateX(-30px); }
+  60% {
+    opacity: 1;
+    transform: translateX(0px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
 
 .page-content {
   display: flex;
