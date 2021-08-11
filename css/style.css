@@ -781,7 +781,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 0 72px; }
+  padding: 60px 0 72px;
+  animation: appear 1s ease; }
   .footer > div {
     max-width: 1080px;
     width: 100%;
