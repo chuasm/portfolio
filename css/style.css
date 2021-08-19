@@ -181,9 +181,9 @@ a:hover {
 @keyframes appear {
   0% {
     opacity: 0; }
-  30% {
+  50% {
     opacity: 0; }
-  70% {
+  90% {
     opacity: 1; }
   100% {
     opacity: 1; } }
@@ -191,9 +191,9 @@ a:hover {
 @keyframes appear-1 {
   0% {
     opacity: 0; }
-  30% {
+  40% {
     opacity: 0; }
-  50% {
+  60% {
     opacity: 1; }
   100% {
     opacity: 1; } }
@@ -212,13 +212,13 @@ a:hover {
   0% {
     opacity: 0;
     transform: translateX(-60px); }
-  30% {
+  40% {
     opacity: 0;
     transform: translateX(-60px); }
-  45% {
+  55% {
     opacity: 0;
     transform: translateX(-30px); }
-  60% {
+  70% {
     opacity: 1;
     transform: translateX(0px); }
   100% {
