@@ -415,6 +415,11 @@ a:hover {
             @media (min-width: 992px) {
               .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .cropped-cover img {
                 width: 40%; } }
+          @media (min-width: 992px) {
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .cropped-cover.wider img {
+              width: 55%; } }
+          .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .cropped-cover.higher {
+            margin-top: -120px; }
         .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .section-header {
           display: flex;
           align-items: center;
