@@ -392,7 +392,8 @@ a:hover {
       width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      position: relative; }
       .subpage.subpage-work .page-body .wrapper .subpage-work-section:nth-child(even) {
         background: #FFFFFF; }
       .subpage.subpage-work .page-body .wrapper .subpage-work-section > div {
@@ -406,6 +407,56 @@ a:hover {
         @media (min-width: 992px) {
           .subpage.subpage-work .page-body .wrapper .subpage-work-section > div {
             max-width: 960px; } }
+        .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator {
+          display: none;
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          width: initial;
+          flex-flow: column;
+          align-items: flex-start;
+          margin: 0 auto;
+          justify-content: center;
+          min-height: initial; }
+          @media (min-width: 768px) {
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator {
+              display: flex; } }
+          .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator.completed circle, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator.completed circle {
+              fill: rgba(0, 0, 0, 0.1); }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator > div, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator > div {
+              margin-left: 7.5px;
+              font-size: 12px;
+              letter-spacing: .5px;
+              text-transform: uppercase; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator > div div, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator > div div {
+                transition: all 0.2s ease; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator > div div:nth-child(1), .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator > div div:nth-child(1) {
+                font-weight: bold;
+                color: #F35D32; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.inactive > div {
+              color: rgba(0, 0, 0, 0.1); }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.inactive > div div:nth-child(1) {
+                color: rgba(0, 0, 0, 0.1) !important; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.inactive .progress-bar {
+              display: none; }
+          .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator .pct {
+            display: none; }
+          .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator svg {
+            position: sticky;
+            transform: rotate(-90deg);
+            transition: all 0.2s ease; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator svg circle {
+              stroke: rgba(0, 0, 0, 0.1);
+              stroke-linecap: round;
+              fill: transparent;
+              transition: all 0.2s ease; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator svg .progress-bar {
+              stroke: #F35D32;
+              transition: stroke-dashoffset 0 ease-in-out; }
         .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .cropped-cover {
           width: 100%;
           display: flex;

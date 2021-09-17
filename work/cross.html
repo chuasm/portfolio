@@ -20,14 +20,55 @@
             </div>
           </div>
         </div>
-        <div class="subpage-work-section">
+        <div class="subpage-work-section" id="admissions">
+
+          <div class="scroll-indicator">
+            <div id="admissions-indicator">
+              <p class="pct">0%</p>
+              <svg class="complete" width="40" height="40" viewport="0 0 20 20" xmlns="https://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad">
+                  <stop offset="0%" stop-color="#fbc2eb"></stop>
+                  <stop offset="100%" stop-color="#a6c1ee"></stop>
+                </linearGradient>
+                </defs>
+                <circle cx="20" cy="20" r="16"></circle>
+                <circle class="progress-bar" cx="20" cy="20" r="16"></circle>
+              </svg>
+              <div>
+                <div>SOTA Admissions</div>
+                <div>2018 - 2021</div>
+              </div>
+            </div>
+
+            <div id="venues-indicator">
+              <p class="pct">0%</p>
+              <svg class="complete" width="40" height="40" viewport="0 0 20 20" xmlns="https://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad">
+                  <stop offset="0%" stop-color="#fbc2eb"></stop>
+                  <stop offset="100%" stop-color="#a6c1ee"></stop>
+                </linearGradient>
+                </defs>
+                <circle cx="20" cy="20" r="16"></circle>
+                <circle class="progress-bar" cx="20" cy="20" r="16"></circle>
+              </svg>
+              <div>
+                <div>SOTA Venues & Retail</div>
+                <div>2021</div>
+              </div>
+            </div>
+          </div>
+
           <div>
             <div class="section-header">
               SOTA Admissions
+              <br>
+              (2018 - 2021)
               <div></div>
             </div>
             <div class="text">
-              SOTA conducts an annual admission exercise for its student intake for the following year. Called the Talent Academy (TA), this is an audition/interview process. The Admissions team, which runs the TA, were facing several <b>challenges in communicating information</b> to prospective students and parents (the users). The web interface back then looked something like this:
+              SOTA conducts an annual admission exercise for its student intake for the following year. Called the Talent Academy (TA), this is an audition/interview process. Back in 2018, the Admissions team, which runs the TA, were facing several <b>challenges in communicating information</b> to prospective students and parents (the users). The web interface back then looked something like this:
             </div>
             <div class="images">
               <div id="ta-old">
@@ -74,23 +115,34 @@
             </div>
           </div>
         </div>
-        <div class="subpage-work-section">
+        <div class="subpage-work-section" id="venues" style="min-height: 3000px; align-items: flex-start;">
           <div>
             <div class="section-header">
               SOTA Venues & Retail
+              <br>
+              (2021)
               <div></div>
             </div>
             <div class="text">
-              I'll update this page soon with more details, but in the meantime you may click on the buttons below to access live interface :)
+              SOTA has performing arts venues (termed 'venues') and retail spaces that are available for rent. In the previous web interface, information on these spaces was presented via each space's dedicated page. As there was <b>no overview page</b>, users who were new to SOTA would have had difficulty finding general information. Also, from a webmaster's point of view, <b>SEO was challenging</b>.
+            </div>
+            <div class="images">
+              <img src="../img/work/sotacross/venues-old.png">
+              <div class="caption">Each space had its own webpage. Could be neater!</div>
+            </div>
+            <div class="text">
+              Identifying a need to rethink the <b>information architecture</b> of these pages to create the best experiences for our users, I first identified our <b>target audience</b>: potential hirers/tenants, and shoppers visiting our retail spaces. Following which, I was able to create <b>personas</b> from which I could <b>reinvent user journeys</b> with.
+              <br><br>
+              I'll update this page soon with more details, but in the meantime you may click on the button below to access the live version of my final product :)
               <div class="buttons" style="margin-top: 30px">
-                <a href="https://www.sota.edu.sg/venues-andretail" target="_blank">SOTA Venues & Retail</a>
+                <a href="https://www.sota.edu.sg/venues-and-retail" target="_blank">SOTA Venues & Retail</a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="work-nav-ctn">
-        <div class="work-nav">
+        <div class="work-nav" id="cross-work-nav">
           <div class="work-nav-width">
             <div class="work-nav-left createState" id="work-sotaawards" onclick="loadWorkAwards()">
               <div class="arrow">

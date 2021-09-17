@@ -41,41 +41,41 @@
 
 // load work.html on entry & page load
     $(document).ready(function(){
-        $('#work-tab').load('/work.html');
+        $('#work-tab').load('work.html');
         toTheTop();
     });
 
 // load individual work items on work-item click
     $('#work-tab').on('click','#work-skills',function() {
-        $('#work-tab').load('/work/skills.html');
+        $('#work-tab').load('work/skills.html');
         toTheTop();
     });
     $('#work-tab').on('click','#work-sotaopenhouse',function() {
-        $('#work-tab').load('/work/openhouses.html');
+        $('#work-tab').load('work/openhouses.html');
         toTheTop();
     });
     $('#work-tab').on('click','#work-sotaawards',function() {
-        $('#work-tab').load('/work/awards.html');
+        $('#work-tab').load('work/awards.html');
         toTheTop();
     });
     $('#work-tab').on('click','#work-sotacross',function() {
-        $('#work-tab').load('/work/cross.html');
+        $('#work-tab').load('work/cross.html');
         toTheTop();
     });
     $('#work-tab').on('click','#work-sotaother',function() {
-        $('#work-tab').load('/work/other.html');
+        $('#work-tab').load('work/other.html');
         toTheTop();
     });
     $('#work-tab').on('click','#work-emailgenerator',function() {
-        $('#work-tab').load('/work/emailgenerator.html');
+        $('#work-tab').load('work/emailgenerator.html');
         toTheTop();
     });
     $('#work-tab').on('click','#work-hdbbto',function() {
-        $('#work-tab').load('/work/hdbbto.html');
+        $('#work-tab').load('work/hdbbto.html');
         toTheTop();
     });
     $('#work-tab').on('click','#work-portfolio',function() {
-        $('#work-tab').load('/work/thisportfolio.html');
+        $('#work-tab').load('work/thisportfolio.html');
         toTheTop();
     });
 
@@ -83,74 +83,74 @@
     function loadWork() {
         $('.nav-item a#work').tab('show');  
         $('.nav-item a#work').parent().addClass('active');    
-        $('#work-tab').load('/work.html');
+        $('#work-tab').load('work.html');
         window.setTimeout(toWorkSection, 50);
     }
     function loadDesign() {
         $('.nav-item a#design').tab('show');
         $('.nav-item a#design').parent().addClass('active');
-        $('#design-tab').load('/design.html');
+        $('#design-tab').load('design.html');
         window.setTimeout(loadDesignContent, 100);
         toTheTop();
     }
     function loadMusic() {
         $('.nav-item a#music').tab('show');
         $('.nav-item a#music').parent().addClass('active');
-        $('#music-tab').load('/music.html');
+        $('#music-tab').load('music.html');
         toTheTop();
     }
     function loadAbout() {
         $('.nav-item a#about').tab('show');
         $('.nav-item a#about').parent().addClass('active');
-        $('#about-tab').load('/about.html');
+        $('#about-tab').load('about.html');
         toTheTop();
     }
     function loadWorkSkills() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/skills.html');
+        $('#work-tab').load('work/skills.html');
         toTheTop();
     }
     function loadWorkOpenHouse() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/openhouses.html');
+        $('#work-tab').load('work/openhouses.html');
         toTheTop();
     }
     function loadWorkAwards() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/awards.html');
+        $('#work-tab').load('work/awards.html');
         toTheTop();
     }
     function loadWorkCross() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/cross.html');
+        $('#work-tab').load('work/cross.html');
         toTheTop();
     }
     function loadWorkOther() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/other.html');
+        $('#work-tab').load('work/other.html');
         toTheTop();
     }
     function loadWorkEmailGenerator() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/emailgenerator.html');
+        $('#work-tab').load('work/emailgenerator.html');
         toTheTop();
     }
     function loadWorkHdbBto() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/hdbbto.html');
+        $('#work-tab').load('work/hdbbto.html');
         toTheTop();
     }
     function loadWorkPortfolio() {
         $('.nav-item a#work').tab('show');
         $('.nav-item a#work').parent().addClass('active');
-        $('#work-tab').load('/work/thisportfolio.html');
+        $('#work-tab').load('work/thisportfolio.html');
         toTheTop();
     }
 
@@ -261,7 +261,7 @@
         } else if (window.location.href.indexOf('about') > -1) {
             window.setTimeout(loadAbout, 0);
         } else {
-            window.setTimeout($('.nav-item:nth-child(1)').addClass('active'), 0);
+            window.setTimeout(() => {$('.nav-item:nth-child(1)').addClass('active'), 0});
         }
     });
      
@@ -289,9 +289,9 @@
     }
     $(document).on({
         scroll: function () {
-        parallax();
+            parallax();
         }, ready: function () {
-        parallaxImg();
+            parallaxImg();
         }
     });
 
@@ -403,4 +403,111 @@
             }
         }
     }
+
+// scroll indicator for sota cross dept projs
+    // general
+        $(window).on('load', function() {
+            admissionsIndicator();
+            venuesIndicator();
+        });
+        $(window).on('resize', function() {
+            admissionsIndicator();
+            venuesIndicator();
+        });
+        $('#work-tab').on('click','#work-sotacross',function() {
+            window.setTimeout(admissionsIndicator, 100);
+            window.setTimeout(venuesIndicator, 100);
+        });
+    // admissions
+        function admissionsIndicator() {
+            const progressBar = document.querySelector('#admissions-indicator .progress-bar');
+            const admissionsPCT = document.querySelector('#admissions-indicator .pct');
+            const totalLength = progressBar.getTotalLength();
+            progressBar.style.strokeDasharray = totalLength;
+            progressBar.style.strokeDashoffset = totalLength;
+            window.addEventListener('scroll', () => {
+                setAdmissionsProgress(admissionsPCT, progressBar, totalLength);
+            });
+        }       
+        function setAdmissionsProgress(percentage, progressBar, totalLength) {
+            const admissions = document.querySelector('#admissions');
+            const admissionsScrollHeight = admissions.scrollHeight;
+            const scrollTop = document.documentElement.scrollTop;
+            
+            var admissionsOffsetTop = admissions.offsetTop;
+            var admissionsPercentage = (scrollTop - admissionsOffsetTop) / admissionsScrollHeight;
+
+            if (admissionsPercentage < 0) {
+                admissionsPercentage = 0;
+                $('#admissions-indicator').addClass('inactive');
+            } else if (admissionsPercentage > 0 || admissionsPercentage <= 1) {
+                $('#admissions-indicator').removeClass('inactive');
+            }
+            if (admissionsPercentage > 1) {
+                admissionsPercentage = 1;
+                $('#admissions-indicator').addClass('completed');
+                $('#admissions-indicator').addClass('inactive');
+            } else {
+                $('#admissions-indicator').removeClass('completed');
+            }
+            percentage.innerHTML = Math.round(admissionsPercentage * 100) + '%';
+            progressBar.style.strokeDashoffset = totalLength - totalLength * admissionsPercentage;  
+        }
+
+    // venues
+        function venuesIndicator() {
+            const progressBar = document.querySelector('#venues-indicator .progress-bar');
+            const venuesPCT = document.querySelector('#venues-indicator .pct');
+            const totalLength = progressBar.getTotalLength();
+            progressBar.style.strokeDasharray = totalLength;
+            progressBar.style.strokeDashoffset = totalLength;
+            window.addEventListener('scroll', () => {
+                setVenuesProgress(venuesPCT, progressBar, totalLength);
+            });
+        }       
+        function setVenuesProgress(percentage, progressBar, totalLength) {
+            const venues = document.querySelector('#venues');
+            const footer = document.querySelector('.footer');
+            const venuesScrollHeight = venues.scrollHeight;
+            const footerScrollHeight = footer.scrollHeight;
+            const scrollTop = document.documentElement.scrollTop;
+            const clientHeight = document.documentElement.clientHeight;
+            
+            var venuesOffsetTop = venues.offsetTop;
+            var venuesPercentage = (scrollTop - venuesOffsetTop) / (venuesScrollHeight - clientHeight);
+
+            if (venuesPercentage < 0) {
+                venuesPercentage = 0;
+                $('#venues-indicator').addClass('inactive');
+            } else if (venuesPercentage > 0 || venuesPercentage <= 1) {
+                $('#venues-indicator').removeClass('inactive');
+            }
+            if (venuesPercentage > 1) {
+                venuesPercentage = 1;
+                $('#venues-indicator').addClass('completed');
+                $('#venues-indicator').addClass('inactive');
+            } else {
+                $('#venues-indicator').removeClass('completed');
+            }
+            percentage.innerHTML = Math.round(venuesPercentage * 100) + '%';
+            progressBar.style.strokeDashoffset = totalLength - totalLength * venuesPercentage;  
+        }
+
+    // toggling between absolute and fixed positioning
+        $(window).on('scroll', function () {
+            var scrollTop     = $(window).scrollTop();
+            var admissionsOffset = $('#admissions').offset().top;
+            admissionsDistance = (admissionsOffset - scrollTop - 58);
+            if (admissionsDistance <= 0) {
+                $('#admissions .scroll-indicator').css({
+                    'position'  : 'fixed',
+                    'top'       : '88px'
+                });
+            } else {
+                $('#admissions .scroll-indicator').css({
+                    'position'  : 'absolute',
+                    'top'       : '30px'
+                });
+            }
+        });
     
