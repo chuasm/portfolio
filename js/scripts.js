@@ -440,8 +440,10 @@
             if (admissionsPercentage < 0) {
                 admissionsPercentage = 0;
                 $('#admissions-indicator').addClass('inactive');
+                $('#admissions-indicator').addClass('before');
             } else if (admissionsPercentage > 0 || admissionsPercentage <= 1) {
                 $('#admissions-indicator').removeClass('inactive');
+                $('#admissions-indicator').removeClass('before');
             }
             if (admissionsPercentage > 1) {
                 admissionsPercentage = 1;
@@ -452,6 +454,11 @@
             }
             percentage.innerHTML = Math.round(admissionsPercentage * 100) + '%';
             progressBar.style.strokeDashoffset = totalLength - totalLength * admissionsPercentage;  
+        }
+        function admissions() {
+            $('html, body').animate({
+                scrollTop: $('#admissions').offset().top + 1
+            }, 'fast');
         }
 
     // venues
@@ -479,8 +486,10 @@
             if (venuesPercentage < 0) {
                 venuesPercentage = 0;
                 $('#venues-indicator').addClass('inactive');
+                $('#venues-indicator').addClass('before');
             } else if (venuesPercentage > 0 || venuesPercentage <= 1) {
                 $('#venues-indicator').removeClass('inactive');
+                $('#venues-indicator').removeClass('before');
             }
             if (venuesPercentage > 1) {
                 venuesPercentage = 1;
@@ -491,6 +500,11 @@
             }
             percentage.innerHTML = Math.round(venuesPercentage * 100) + '%';
             progressBar.style.strokeDashoffset = totalLength - totalLength * venuesPercentage;  
+        }
+        function venues() {
+            $('html, body').animate({
+                scrollTop: $('#venues').offset().top + 1
+            }, 'fast');
         }
 
     // toggling between absolute and fixed positioning
