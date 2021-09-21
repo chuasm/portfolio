@@ -410,10 +410,14 @@ a:hover {
         .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator {
           z-index: 999;
           display: none;
+          background: #FFFFFF;
+          padding: 15px;
+          border-radius: 0 16px 16px 0;
+          box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.1);
           animation: appear-1 2s ease;
           position: absolute;
           top: 30px;
-          left: 30px;
+          left: 0;
           width: initial;
           flex-flow: column;
           align-items: flex-start;
@@ -426,34 +430,36 @@ a:hover {
           .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div {
             display: flex;
             align-items: center;
-            margin-bottom: 15px; }
-            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator {
-              padding-right: 15px; }
-              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator:hover, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator:hover {
-                cursor: pointer;
-                border-right: 2px solid rgba(0, 0, 0, 0.1); }
-              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator > div, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator > div {
-                margin-left: 7.5px;
-                font-size: 12px;
-                letter-spacing: .5px;
+            margin-bottom: 15px;
+            padding-right: 15px; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div:last-child {
+              margin-bottom: 0; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div:hover {
+              cursor: pointer;
+              opacity: .6; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div > div {
+              margin-left: 7.5px;
+              font-size: 12px;
+              letter-spacing: .5px; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div > div div {
+                transition: all 0.2s ease; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div > div div:nth-child(1) {
+                font-weight: bold;
                 text-transform: uppercase; }
-                .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator > div div, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator > div div {
-                  transition: all 0.2s ease; }
-                .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator > div div:nth-child(1), .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator > div div:nth-child(1) {
-                  font-weight: bold;
-                  color: #F35D32; }
-              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator.before > div, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator.before > div {
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.before > div {
+              color: #333333; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.before > div div:nth-child(1) {
                 color: #333333 !important; }
-                .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator.before > div div:nth-child(1), .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator.before > div div:nth-child(1) {
-                  color: #333333 !important; }
-              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator.completed circle, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator.completed circle {
-                fill: rgba(0, 0, 0, 0.1); }
-              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator.inactive, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator.inactive {
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.completed circle {
+              fill: rgba(0, 0, 0, 0.1); }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.completed div:nth-child(1) {
+              color: rgba(0, 0, 0, 0.1) !important; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.inactive {
+              color: rgba(0, 0, 0, 0.1); }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.inactive div:nth-child(1) {
                 color: rgba(0, 0, 0, 0.1); }
-                .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator.inactive div:nth-child(1), .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator.inactive div:nth-child(1) {
-                  color: rgba(0, 0, 0, 0.1); }
-                .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#admissions-indicator.inactive .progress-bar, .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div#venues-indicator.inactive .progress-bar {
-                  display: none; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator > div.inactive .progress-bar {
+                display: none; }
           .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator .pct {
             display: none; }
           .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator svg {
@@ -467,7 +473,6 @@ a:hover {
               fill: rgba(0, 0, 0, 0);
               transition: all 0.2s ease; }
             .subpage.subpage-work .page-body .wrapper .subpage-work-section > div.scroll-indicator svg .progress-bar {
-              stroke: #F35D32;
               transition: stroke-dashoffset 0 ease-in-out; }
         .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .cropped-cover {
           width: 100%;
@@ -765,6 +770,12 @@ a:hover {
   .subpage#page-work-sotacross .page-body .buttons > a:hover {
     background: #F35D32; }
 
+.subpage#page-work-sotacross .page-body .scroll-indicator > div > div div:nth-child(1) {
+  color: #F35D32; }
+
+.subpage#page-work-sotacross .page-body .scroll-indicator svg .progress-bar {
+  stroke: #F35D32; }
+
 .subpage#page-work-sotacross .cropped-cover {
   margin-top: -105px;
   margin-bottom: 30px;
@@ -790,6 +801,15 @@ a:hover {
   color: #4C4D7C; }
   .subpage#page-work-sotaother .page-body .buttons > a:hover {
     background: #4C4D7C; }
+
+.subpage#page-work-sotaother .page-body .scroll-indicator > div > div div:nth-child(1) {
+  color: #4C4D7C; }
+
+.subpage#page-work-sotaother .page-body .scroll-indicator svg .progress-bar {
+  stroke: #4C4D7C; }
+
+.subpage#page-work-sotaother .cropped-cover {
+  margin-top: -135px; }
 
 .subpage#page-work-emailgenerator .page-header {
   background-color: #8B9C56; }

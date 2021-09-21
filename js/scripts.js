@@ -404,20 +404,7 @@
         }
     }
 
-// scroll indicator for sota cross dept projs
-    // general
-        $(window).on('load', function() {
-            admissionsIndicator();
-            venuesIndicator();
-        });
-        $(window).on('resize', function() {
-            admissionsIndicator();
-            venuesIndicator();
-        });
-        $('#work-tab').on('click','#work-sotacross',function() {
-            window.setTimeout(admissionsIndicator, 100);
-            window.setTimeout(venuesIndicator, 100);
-        });
+// scroll indicators
     // admissions
         function admissionsIndicator() {
             const progressBar = document.querySelector('#admissions-indicator .progress-bar');
@@ -460,7 +447,6 @@
                 scrollTop: $('#admissions').offset().top + 1
             }, 'fast');
         }
-
     // venues
         function venuesIndicator() {
             const progressBar = document.querySelector('#venues-indicator .progress-bar');
@@ -474,9 +460,7 @@
         }       
         function setVenuesProgress(percentage, progressBar, totalLength) {
             const venues = document.querySelector('#venues');
-            const footer = document.querySelector('.footer');
             const venuesScrollHeight = venues.scrollHeight;
-            const footerScrollHeight = footer.scrollHeight;
             const scrollTop = document.documentElement.scrollTop;
             const clientHeight = document.documentElement.clientHeight;
             
@@ -506,19 +490,173 @@
                 scrollTop: $('#venues').offset().top + 1
             }, 'fast');
         }
+    // donate
+        function donateIndicator() {
+            const progressBar = document.querySelector('#donate-indicator .progress-bar');
+            const donatePCT = document.querySelector('#donate-indicator .pct');
+            const totalLength = progressBar.getTotalLength();
+            progressBar.style.strokeDasharray = totalLength;
+            progressBar.style.strokeDashoffset = totalLength;
+            window.addEventListener('scroll', () => {
+                setDonateProgress(donatePCT, progressBar, totalLength);
+            });
+        }       
+        function setDonateProgress(percentage, progressBar, totalLength) {
+            const donate = document.querySelector('#donate');
+            const donateScrollHeight = donate.scrollHeight;
+            const scrollTop = document.documentElement.scrollTop;
+            const clientHeight = document.documentElement.clientHeight;
+            
+            var donateOffsetTop = donate.offsetTop;
+            var donatePercentage = (scrollTop - donateOffsetTop) / donateScrollHeight;
 
+            if (donatePercentage < 0) {
+                donatePercentage = 0;
+                $('#donate-indicator').addClass('inactive');
+                $('#donate-indicator').addClass('before');
+            } else if (donatePercentage > 0 || donatePercentage <= 1) {
+                $('#donate-indicator').removeClass('inactive');
+                $('#donate-indicator').removeClass('before');
+            }
+            if (donatePercentage > 1) {
+                donatePercentage = 1;
+                $('#donate-indicator').addClass('completed');
+                $('#donate-indicator').addClass('inactive');
+            } else {
+                $('#donate-indicator').removeClass('completed');
+            }
+            percentage.innerHTML = Math.round(donatePercentage * 100) + '%';
+            progressBar.style.strokeDashoffset = totalLength - totalLength * donatePercentage;  
+        }
+        function donate() {
+            $('html, body').animate({
+                scrollTop: $('#donate').offset().top + 1
+            }, 'fast');
+        }
+    // what's on
+        function whatsonIndicator() {
+            const progressBar = document.querySelector('#whatson-indicator .progress-bar');
+            const whatsonPCT = document.querySelector('#whatson-indicator .pct');
+            const totalLength = progressBar.getTotalLength();
+            progressBar.style.strokeDasharray = totalLength;
+            progressBar.style.strokeDashoffset = totalLength;
+            window.addEventListener('scroll', () => {
+                setWhatsonProgress(whatson, progressBar, totalLength);
+            });
+        }       
+        function setWhatsonProgress(percentage, progressBar, totalLength) {
+            const whatson = document.querySelector('#whatson');
+            const whatsonScrollHeight = whatson.scrollHeight;
+            const scrollTop = document.documentElement.scrollTop;
+            const clientHeight = document.documentElement.clientHeight;
+            
+            var whatsonOffsetTop = whatson.offsetTop;
+            var whatsonPercentage = (scrollTop - whatsonOffsetTop) / whatsonScrollHeight;
+
+            if (whatsonPercentage < 0) {
+                whatsonPercentage = 0;
+                $('#whatson-indicator').addClass('inactive');
+                $('#whatson-indicator').addClass('before');
+            } else if (whatsonPercentage > 0 || whatsonPercentage <= 1) {
+                $('#whatson-indicator').removeClass('inactive');
+                $('#whatson-indicator').removeClass('before');
+            }
+            if (whatsonPercentage > 1) {
+                whatsonPercentage = 1;
+                $('#whatson-indicator').addClass('completed');
+                $('#whatson-indicator').addClass('inactive');
+            } else {
+                $('#whatson-indicator').removeClass('completed');
+            }
+            percentage.innerHTML = Math.round(whatsonPercentage * 100) + '%';
+            progressBar.style.strokeDashoffset = totalLength - totalLength * whatsonPercentage;  
+        }
+        function whatson() {
+            $('html, body').animate({
+                scrollTop: $('#whatson').offset().top + 1
+            }, 'fast');
+        }
+    // venues
+        function linkinbioIndicator() {
+            const progressBar = document.querySelector('#linkinbio-indicator .progress-bar');
+            const linkinbioPCT = document.querySelector('#linkinbio-indicator .pct');
+            const totalLength = progressBar.getTotalLength();
+            progressBar.style.strokeDasharray = totalLength;
+            progressBar.style.strokeDashoffset = totalLength;
+            window.addEventListener('scroll', () => {
+                setLinkinbioProgress(linkinbioPCT, progressBar, totalLength);
+            });
+        }       
+        function setLinkinbioProgress(percentage, progressBar, totalLength) {
+            const linkinbio = document.querySelector('#linkinbio');
+            const linkinbioScrollHeight = linkinbio.scrollHeight;
+            const scrollTop = document.documentElement.scrollTop;
+            const clientHeight = document.documentElement.clientHeight;
+            
+            var linkinbioOffsetTop = linkinbio.offsetTop;
+            var linkinbioPercentage = (scrollTop - linkinbioOffsetTop) / (linkinbioScrollHeight - clientHeight);
+
+            if (linkinbioPercentage < 0) {
+                linkinbioPercentage = 0;
+                $('#linkinbio-indicator').addClass('inactive');
+                $('#linkinbio-indicator').addClass('before');
+            } else if (linkinbioPercentage > 0 || linkinbioPercentage <= 1) {
+                $('#linkinbio-indicator').removeClass('inactive');
+                $('#linkinbio-indicator').removeClass('before');
+            }
+            if (linkinbioPercentage > 1) {
+                linkinbioPercentage = 1;
+                $('#linkinbio-indicator').addClass('completed');
+                $('#linkinbio-indicator').addClass('inactive');
+            } else {
+                $('#linkinbio-indicator').removeClass('completed');
+            }
+            percentage.innerHTML = Math.round(linkinbioPercentage * 100) + '%';
+            progressBar.style.strokeDashoffset = totalLength - totalLength * linkinbioPercentage;  
+        }
+        function linkinbio() {
+            $('html, body').animate({
+                scrollTop: $('#linkinbio').offset().top + 1
+            }, 'fast');
+        }
+    // activate the above
+        function activateIndicators() {
+            window.setTimeout(admissionsIndicator, 100);
+            window.setTimeout(venuesIndicator, 100);
+            window.setTimeout(donateIndicator, 100);
+            window.setTimeout(whatsonIndicator, 100);
+            window.setTimeout(linkinbioIndicator, 100);
+        }
+        $(window).on('load', function() {
+            activateIndicators();
+        });
+        $(window).on('resize', function() {
+            activateIndicators();
+        });
+        $('#work-tab').on('click','#work-sotacross',function() {
+            activateIndicators();
+        });
+        $('#work-items').on('click','#work-sotacross',function() {
+            activateIndicators();
+        });
+        $('#work-tab').on('click','#work-sotaother',function() {
+            activateIndicators();
+        });
+        $('#work-items').on('click','#work-sotaother',function() {
+            activateIndicators();
+        });
     // toggling between absolute and fixed positioning
         $(window).on('scroll', function () {
             var scrollTop     = $(window).scrollTop();
-            var admissionsOffset = $('#admissions').offset().top;
-            admissionsDistance = (admissionsOffset - scrollTop - 58);
-            if (admissionsDistance <= 0) {
-                $('#admissions .scroll-indicator').css({
+            var offset = $('.indicator-stick').offset().top;
+            distance = (offset - scrollTop - 58);
+            if (distance <= 0) {
+                $('.scroll-indicator').css({
                     'position'  : 'fixed',
                     'top'       : '88px'
                 });
             } else {
-                $('#admissions .scroll-indicator').css({
+                $('.scroll-indicator').css({
                     'position'  : 'absolute',
                     'top'       : '30px'
                 });
