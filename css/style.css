@@ -17,6 +17,9 @@ a:hover {
   .mobile {
     display: none; } }
 
+.box-shadow {
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.3); }
+
 #pseudo-state {
   position: fixed;
   top: 0;
@@ -816,6 +819,12 @@ a:hover {
 
 .subpage#page-work-hdbbto .page-header {
   background-color: #E06564; }
+
+.subpage#page-work-hdbbto .page-body .buttons > a {
+  border: 1px solid #E06564;
+  color: #E06564; }
+  .subpage#page-work-hdbbto .page-body .buttons > a:hover {
+    background: #E06564; }
 
 .subpage#page-work-portfolio .page-header {
   background-color: #C48A6D; }
