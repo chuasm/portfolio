@@ -547,6 +547,33 @@ a:hover {
                 color: #F8F8F8 !important; }
                 .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .buttons > a:hover:before {
                   width: 100%; }
+          .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; }
+            .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks > div {
+              transform: rotate(0);
+              width: 50%; }
+              @media (min-width: 768px) {
+                .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks > div {
+                  width: 25%; } }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks > div:nth-child(2) {
+                margin-bottom: 30px; }
+                @media (min-width: 768px) {
+                  .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks > div:nth-child(2) {
+                    margin-bottom: 0; } }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks > div img {
+                width: 80%;
+                padding: 0 15px 15px 15px;
+                display: block;
+                margin: auto; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks > div span {
+                font-style: italic;
+                text-align: center;
+                margin: auto;
+                display: block; }
+              .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .text .frameworks > div:hover span {
+                font-weight: bold; }
         .subpage.subpage-work .page-body .wrapper .subpage-work-section > div .images {
           max-width: 840px;
           width: 100%; }
@@ -721,48 +748,24 @@ a:hover {
 .subpage#page-work-sotaawards .page-header {
   background-color: #3585A5; }
 
+.subpage#page-work-sotaawards .page-body .frameworks > div:hover:nth-child(1) span {
+  color: #2F375D; }
+  .subpage#page-work-sotaawards .page-body .frameworks > div:hover:nth-child(1) span#json {
+    color: #575757; }
+
+.subpage#page-work-sotaawards .page-body .frameworks > div:hover:nth-child(2) span {
+  color: #822AF6; }
+  .subpage#page-work-sotaawards .page-body .frameworks > div:hover:nth-child(2) span#sass {
+    color: #CD6799; }
+
+.subpage#page-work-sotaawards .page-body .frameworks > div:hover:nth-child(3) span {
+  color: #228AE6; }
+
+.subpage#page-work-sotaawards .page-body .frameworks > div:hover:nth-child(4) span {
+  color: #1069AD; }
+
 .subpage#page-work-sotaawards .cropped-cover {
   margin-top: -105px; }
-
-.subpage#page-work-sotaawards .frameworks {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-  .subpage#page-work-sotaawards .frameworks > div {
-    transform: rotate(0);
-    width: 50%; }
-    @media (min-width: 768px) {
-      .subpage#page-work-sotaawards .frameworks > div {
-        width: 25%; } }
-    .subpage#page-work-sotaawards .frameworks > div:nth-child(2) {
-      margin-bottom: 30px; }
-      @media (min-width: 768px) {
-        .subpage#page-work-sotaawards .frameworks > div:nth-child(2) {
-          margin-bottom: 0; } }
-    .subpage#page-work-sotaawards .frameworks > div img {
-      width: 80%;
-      padding: 0 15px 15px 15px;
-      display: block;
-      margin: auto; }
-    .subpage#page-work-sotaawards .frameworks > div span {
-      font-style: italic;
-      text-align: center;
-      margin: auto;
-      display: block; }
-    .subpage#page-work-sotaawards .frameworks > div:hover span {
-      font-weight: bold; }
-    .subpage#page-work-sotaawards .frameworks > div:hover:nth-child(1) span {
-      color: #2F375D; }
-      .subpage#page-work-sotaawards .frameworks > div:hover:nth-child(1) span#json {
-        color: #575757; }
-    .subpage#page-work-sotaawards .frameworks > div:hover:nth-child(2) span {
-      color: #822AF6; }
-      .subpage#page-work-sotaawards .frameworks > div:hover:nth-child(2) span#sass {
-        color: #CD6799; }
-    .subpage#page-work-sotaawards .frameworks > div:hover:nth-child(3) span {
-      color: #228AE6; }
-    .subpage#page-work-sotaawards .frameworks > div:hover:nth-child(4) span {
-      color: #1069AD; }
 
 .subpage#page-work-sotacross .page-header {
   background-color: #F35D32; }
@@ -828,6 +831,15 @@ a:hover {
 
 .subpage#page-work-portfolio .page-header {
   background-color: #C48A6D; }
+
+.subpage#page-work-portfolio .page-body .frameworks > div:hover:nth-child(1) span {
+  color: #7BB265; }
+
+.subpage#page-work-portfolio .page-body .frameworks > div:hover:nth-child(2) span {
+  color: #545F69; }
+
+.subpage#page-work-portfolio .page-body .frameworks > div:hover:nth-child(3) span {
+  color: #000000; }
 
 .subpage#design .page-header {
   background: #9E5BA3;
