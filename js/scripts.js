@@ -327,7 +327,6 @@
     }
     
 // functions to open/close sidebar
-    var togglerClicks = 0;
     var navWidth = $('#nav').width();
     function closeSidebar() {
         $('.navbar.fixed-top').css ({
@@ -372,7 +371,6 @@
 // close sidebar on nav item click
     $('.nav-item').on('click',function() {
         if (window.matchMedia('(max-width: 991px)').matches) {
-            togglerClicks += 1;
             closeSidebar();
         }  
     });
@@ -380,7 +378,6 @@
 // close sidebar on main body content click
     $('#tabs-and-footer').on('click',function() {
         if ($('body').css('overflow-y') == 'hidden') {
-            togglerClicks += 1;
             closeSidebar();
         }  
     });
