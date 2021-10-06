@@ -85,8 +85,6 @@ a:hover {
       transition: all 0.1s ease; }
       .navbar .navbar-toggler:focus {
         box-shadow: none; }
-      .navbar .navbar-toggler.active .navbar-toggler-icon {
-        background-image: url("https://www.lifepng.com/wp-content/uploads/2020/03/Black-X-Letter.png"); }
     .navbar .collapse:not(.show) {
       display: block !important; }
       .navbar .collapse:not(.show) .nav {
@@ -117,6 +115,16 @@ a:hover {
 #tabs-and-footer {
   position: absolute;
   width: 100%; }
+  #tabs-and-footer .overlay {
+    background: #333333;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    opacity: .6; }
 
 .tab-content {
   transition: all 0.2s ease;

@@ -336,10 +336,12 @@
         $('#tabs-and-footer').css ({
             'left': 0
         });
-        $('#navbar-toggler').css ({
-            'left': 15
+        $('#tabs-and-footer .overlay').css ({
+            'display': 'none'
         });
-        $('#navbar-toggler').removeClass('active');
+        $('#navbar-toggler').css ({
+            'display': 'block'
+        });
         $('body').css ({
             'overflow-y': 'initial'
         });
@@ -351,24 +353,20 @@
         $('#tabs-and-footer').css ({
             'left': navWidth
         });
-        $('#navbar-toggler').css ({
-            'left': navWidth + 15
+        $('#tabs-and-footer .overlay').css ({
+            'display': 'block'
         });
-        $('#navbar-toggler').addClass('active');
+        $('#navbar-toggler').css ({
+            'display': 'none'
+        });
         $('body').css ({
             'overflow-y': 'hidden'
         });
     }
 
-// open/close sidebar on toggler click
+// open sidebar on toggler click
     $('.navbar-toggler').on('click',function() {
-        togglerClicks += 1;
-        if (togglerClicks % 2 == 0) {
-            closeSidebar();
-        }
-        else {
-            openSidebar();
-        }  
+        openSidebar();
     });
 
 // close sidebar on nav item click
