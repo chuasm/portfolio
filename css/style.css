@@ -115,7 +115,7 @@ a:hover {
 #tabs-and-footer {
   position: absolute;
   width: 100%; }
-  #tabs-and-footer .overlay {
+  #tabs-and-footer .toggle-overlay {
     background: #333333;
     display: none;
     position: fixed;

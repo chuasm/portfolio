@@ -11,12 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <meta name="robots" content="noindex">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.0/css/all.css">
-    <link rel="shortcut icon" href="/img/cat.png">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="img/cat.png">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://player.vimeo.com/api/player.js"></script>
 
     <link rel="stylesheet" href="https://use.typekit.net/aul1yzr.css">
@@ -30,13 +30,13 @@
 
     <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav">
-        <div class="container-fluid">
+        <div class="container-fluid" id="menu">
           <button class="navbar-toggler" type="button" data-bs-target="#navbar" id="navbar-toggler">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav" id="myTab">
-              <li class="nav-item active">
+              <li class="nav-item has-megamenu active dropdown">
                 <a class="stretched-link createState active" id="work" data-title="Work" data-bs-toggle="tab" data-bs-target="#work-tab" type="button">Work</a>
               </li>
               <li class="nav-item">
@@ -56,34 +56,42 @@
         </div>
       </nav>
 
+    <!-- Megamenu -->
+      <!-- <div id="megamenu">
+        <div>blah blah</div>
+      </div> -->
+
     <!-- All tabs & footer -->
-    <div id="tabs-and-footer">
+      <div id="tabs-and-footer">
 
-      <!-- All tabs -->
-        <div class="tab-content" id="tab-content">
+        <!-- Overlay -->
+          <div class="toggle-overlay"></div>
 
-        <!-- First tab -->
-          <div class="tab-pane fade show active" id="work-tab">
+        <!-- All tabs -->
+          <div class="tab-content" id="tab-content">
+
+          <!-- First tab -->
+            <div class="tab-pane fade show active" id="work-tab">
+            </div>
+
+          <!-- Other tabs -->
+            <div class="tab-pane fade" id="work-items"></div>
+            <div class="tab-pane fade" id="design-tab"></div>
+            <div class="tab-pane fade" id="music-tab"></div>
+            <div class="tab-pane fade" id="about-tab"></div>
+
           </div>
-
-        <!-- Other tabs -->
-          <div class="tab-pane fade" id="work-items"></div>
-          <div class="tab-pane fade" id="design-tab"></div>
-          <div class="tab-pane fade" id="music-tab"></div>
-          <div class="tab-pane fade" id="about-tab"></div>
-
-        </div>
 
     <!-- Footer -->
       <div class="footer">
         <div>
           <span class="heading">Let's connect!</span>
-          <span>Download my <a href="/resume.pdf" target="_blank">resume</a>, or drop me an <a href="mailto:chuasimin10@gmail.com">email</a>.</span>
+          <span>Download my <a href="resume.pdf" target="_blank">resume</a>, or drop me an <a href="mailto:chuasimin10@gmail.com">email</a>.</span>
         </div>
       </div>
 
     </div>
 
-    <script src="/js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -335,7 +335,7 @@
         $('#tabs-and-footer').css ({
             'left': 0
         });
-        $('#tabs-and-footer .overlay').css ({
+        $('#tabs-and-footer .toggle-overlay').css ({
             'display': 'none'
         });
         $('#navbar-toggler').css ({
@@ -352,7 +352,7 @@
         $('#tabs-and-footer').css ({
             'left': navWidth
         });
-        $('#tabs-and-footer .overlay').css ({
+        $('#tabs-and-footer .toggle-overlay').css ({
             'display': 'block'
         });
         $('#navbar-toggler').css ({
