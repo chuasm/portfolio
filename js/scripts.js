@@ -25,6 +25,15 @@
         }
     });
 
+// show megamenu on tab hover
+    $('li.nav-item.has-megamenu').hover(
+        function() {
+            $('#megamenu').addClass('active');
+        }, function() {
+            $('#megamenu').removeClass('active');
+        }
+    );
+
 // scroll to top of page on tab click
     function toTheTop() {
         $('html, body').animate({
@@ -295,7 +304,7 @@
         }
     });
 
-// shrink navbar on scroll, only for desktop
+// shrink navbar & move megamenu up accordingly on scroll, only for desktop
     if (window.matchMedia('(min-width: 992px)').matches) {
         $(document).on('scroll',function() {
             var st = $(this).scrollTop();
@@ -303,9 +312,15 @@
                 $('.navbar > div ul li').css({
                     'height': '58px'
                 });
+                $('#megamenu').css({
+                    'top': '58px'
+                });
             } else {
                 $('.navbar > div ul li').css({
                     'height': '68px'
+                });
+                $('#megamenu').css({
+                    'top': '68px'
                 });
             }
         });
@@ -505,7 +520,6 @@
             const donate = document.querySelector('#donate');
             const donateScrollHeight = donate.scrollHeight;
             const scrollTop = document.documentElement.scrollTop;
-            const clientHeight = document.documentElement.clientHeight;
             
             var donateOffsetTop = donate.offsetTop;
             var donatePercentage = (scrollTop - donateOffsetTop) / donateScrollHeight;
@@ -541,14 +555,13 @@
             progressBar.style.strokeDasharray = totalLength;
             progressBar.style.strokeDashoffset = totalLength;
             window.addEventListener('scroll', () => {
-                setWhatsonProgress(whatson, progressBar, totalLength);
+                setWhatsonProgress(whatsonPCT, progressBar, totalLength);
             });
         }       
         function setWhatsonProgress(percentage, progressBar, totalLength) {
             const whatson = document.querySelector('#whatson');
             const whatsonScrollHeight = whatson.scrollHeight;
             const scrollTop = document.documentElement.scrollTop;
-            const clientHeight = document.documentElement.clientHeight;
             
             var whatsonOffsetTop = whatson.offsetTop;
             var whatsonPercentage = (scrollTop - whatsonOffsetTop) / whatsonScrollHeight;
@@ -620,30 +633,33 @@
             }, 'fast');
         }
     // activate the above
-        function activateIndicators() {
+        function activateCrossIndicators() {
             window.setTimeout(admissionsIndicator, 100);
             window.setTimeout(venuesIndicator, 100);
+        }
+        function activateOthersIndicators() {
             window.setTimeout(donateIndicator, 100);
             window.setTimeout(whatsonIndicator, 100);
             window.setTimeout(linkinbioIndicator, 100);
         }
-        $(window).on('load', function() {
-            activateIndicators();
-        });
-        $(window).on('resize', function() {
-            activateIndicators();
+        $(window).on('load resize', function() {
+            if (window.location.href.indexOf('work-sotacross') > -1) {
+                activateCrossIndicators();
+            } else {
+                activateOthersIndicators();
+            }
         });
         $('#work-tab').on('click','#work-sotacross',function() {
-            activateIndicators();
+            activateCrossIndicators();
         });
         $('#work-items').on('click','#work-sotacross',function() {
-            activateIndicators();
+            activateCrossIndicators();
         });
         $('#work-tab').on('click','#work-sotaother',function() {
-            activateIndicators();
+            activateOthersIndicators();
         });
         $('#work-items').on('click','#work-sotaother',function() {
-            activateIndicators();
+            activateOthersIndicators();
         });
     // toggling between absolute and fixed positioning
         $(window).on('scroll', function () {

@@ -92,6 +92,28 @@ a:hover {
       .navbar .collapse:not(.show) .nav {
         display: block; } }
 
+#megamenu {
+  width: 80%;
+  height: 200px;
+  position: fixed;
+  top: 68px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 1;
+  background: #333333;
+  transition: all 0.2s ease;
+  box-shadow: 0px 4px 20px rgba(50, 50, 50, 0.1);
+  border-bottom: 5px solid #FFFFFF;
+  color: #F8F8F8;
+  display: none; }
+  @media (min-width: 768px) {
+    #megamenu {
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+  #megamenu.active {
+    transform: translate(-50%); }
+
 #tabs-and-footer {
   position: absolute;
   width: 100%; }
@@ -126,12 +148,17 @@ a:hover {
       animation: appear 1s ease; }
       #hero #hero-wrapper #hero-items > div:nth-child(1) {
         display: flex;
-        justify-content: center;
-        max-width: 80% !important; }
+        justify-content: center; }
+        @media (min-width: 768px) {
+          #hero #hero-wrapper #hero-items > div:nth-child(1) {
+            max-width: 80% !important; } }
         #hero #hero-wrapper #hero-items > div:nth-child(1) object {
           width: 100%;
-          padding-bottom: 22.5px;
-          transform: rotate(5deg); }
+          padding-bottom: 60px; }
+          @media (min-width: 768px) {
+            #hero #hero-wrapper #hero-items > div:nth-child(1) object {
+              padding-bottom: 22.5px;
+              transform: rotate(5deg); } }
         @media (min-width: 992px) {
           #hero #hero-wrapper #hero-items > div:nth-child(1) {
             padding-bottom: 7.5px; } }
@@ -140,10 +167,12 @@ a:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url("../img/table.svg");
         background-repeat: no-repeat;
         background-position: bottom;
         padding: 0px 10px 0 30px; }
+        @media (min-width: 768px) {
+          #hero #hero-wrapper #hero-items > div:nth-child(2) {
+            background-image: url("../img/table.svg"); } }
         @media (min-width: 992px) {
           #hero #hero-wrapper #hero-items > div:nth-child(2) {
             padding: 10px 14px 0 42px; } }
@@ -151,7 +180,11 @@ a:hover {
           align-self: flex-start; }
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#keyboard, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#keyboard {
             width: 100%;
-            transform: translateY(8px); }
+            transform: translateY(8px);
+            display: none; }
+            @media (min-width: 768px) {
+              #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#keyboard, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#keyboard {
+                display: block; } }
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div object#laptop, #hero #hero-wrapper #hero-items > div:nth-child(2) > div svg#laptop {
             width: 100%;
             transform: scale(1.2) translate(-5px, 0px); }
@@ -165,15 +198,19 @@ a:hover {
           #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#cat {
             position: absolute;
             width: 12%;
-            transform: scaleX(-1) translateY(8px);
             right: 15%;
-            top: 20%; }
+            top: 20%;
+            transform: scaleX(-1) translateY(8px);
+            display: none; }
       #hero #hero-wrapper #hero-items > div:nth-child(3) {
-        padding-top: 22.5px;
+        padding-top: 60px;
         text-align: center;
         font-size: .8em;
         letter-spacing: 2px;
         animation: appear-1 4s ease; }
+        @media (min-width: 768px) {
+          #hero #hero-wrapper #hero-items > div:nth-child(3) {
+            padding-top: 22.5px; } }
       #hero #hero-wrapper #hero-items > div:nth-child(4) {
         position: absolute;
         bottom: 15px;
