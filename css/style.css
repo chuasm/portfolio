@@ -126,10 +126,6 @@ a:hover {
     z-index: 999;
     opacity: .6; }
 
-.tab-content {
-  transition: all 0.2s ease;
-  width: 100%; }
-
 #hero {
   width: 100vw;
   height: 100vh;
@@ -210,6 +206,9 @@ a:hover {
             top: 20%;
             transform: scaleX(-1) translateY(8px);
             display: none; }
+            @media (min-width: 768px) {
+              #hero #hero-wrapper #hero-items > div:nth-child(2) > div img#cat {
+                display: block; } }
       #hero #hero-wrapper #hero-items > div:nth-child(3) {
         padding-top: 60px;
         text-align: center;
