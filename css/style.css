@@ -398,6 +398,13 @@ a:hover {
         background-repeat: no-repeat; }
         #work-section > div > div #work-emailgenerator > div .overlay {
           background: #8B9C56; }
+      #work-section > div > div #work-hdbflatportal > div {
+        background: url("../img/work/hdbflatportal/cover.jpg");
+        background-size: 102%;
+        background-position: center;
+        background-repeat: no-repeat; }
+        #work-section > div > div #work-hdbflatportal > div .overlay {
+          background: #C9C346; }
       #work-section > div > div #work-hdbbto > div {
         background: url("../img/work/hdbbto/cover.jpg");
         background-size: 102%;
@@ -863,6 +870,26 @@ a:hover {
 
 .subpage#page-work-emailgenerator .page-header {
   background-color: #8B9C56; }
+
+.subpage#page-work-hdbflatportal .page-header {
+  background-color: #C9C346; }
+
+.subpage#page-work-hdbflatportal .iframe-ctn {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 61.25%; }
+  .subpage#page-work-hdbflatportal .iframe-ctn iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
+
+.subpage#page-work-hdbflatportal .cropped-cover {
+  margin-top: -150px; }
 
 .subpage#page-work-hdbbto .page-header {
   background-color: #E06564; }
